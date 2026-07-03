@@ -87,6 +87,10 @@ import kotlinx.datetime.LocalDateTime
 import kotlinx.datetime.LocalTime
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.resources.vectorResource
+import kotlin.time.Duration.Companion.milliseconds
+
+private const val TITLE_STRING_LIMIT = 50
+private const val DESCRIPTION_STRING_LIMIT = 200
 
 @Composable
 expect fun HabitUpsertSheet(
@@ -128,7 +132,7 @@ fun HabitUpsertSheetContent(
         )
 
     LaunchedEffect(Unit) {
-        delay(400)
+        delay(400.milliseconds)
         focusRequester.requestFocus()
         keyboardController?.show()
     }
@@ -362,8 +366,8 @@ fun HabitUpsertSheetContent(
                     },
                     modifier = Modifier.padding(bottom = 32.dp).fillMaxWidth(),
                     enabled =
-                        descTextFieldState.text.length <= 50 &&
-                            titleTextFieldState.text.length <= 20 &&
+                        descTextFieldState.text.length <= DESCRIPTION_STRING_LIMIT &&
+                            titleTextFieldState.text.length <= TITLE_STRING_LIMIT &&
                             titleTextFieldState.text.isNotBlank(),
                 ) {
                     Text(
