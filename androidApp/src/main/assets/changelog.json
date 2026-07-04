@@ -1,5 +1,12 @@
 [
   {
+    "version": "6.0.4",
+    "changes": [
+      "Updated Translations",
+      "Increased habit title and description length limits"
+    ]
+  },
+  {
     "version": "6.0.3",
     "changes": [
       "Updated Translations",
@@ -66,13 +73,6 @@
       "Miscellaneous UI fixes",
       "Updated Translations",
       "Added Keyboard Autofocus to new Habit (#280)"
-    ]
-  },
-  {
-    "version": "5.9.1",
-    "changes": [
-      "Miscellaneous fixes and updates",
-      "Updated Translations"
     ]
   }
 ]

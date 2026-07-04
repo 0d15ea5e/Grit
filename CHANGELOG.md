@@ -1,5 +1,9 @@
 # Changelog
 
+## 6.0.4
+- Updated Translations
+- Increased habit title and description length limits
+
 ## 6.0.3
 - Updated Translations
 - Calendar UI Improvements

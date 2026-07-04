@@ -87,6 +87,10 @@ import kotlinx.datetime.LocalDateTime
 import kotlinx.datetime.LocalTime
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.resources.vectorResource
+import kotlin.time.Duration.Companion.milliseconds
+
+private const val TITLE_STRING_LIMIT = 50
+private const val DESCRIPTION_STRING_LIMIT = 200
 
 @Composable
 expect fun HabitUpsertSheet(
@@ -128,7 +132,7 @@ fun HabitUpsertSheetContent(
         )
 
     LaunchedEffect(Unit) {
-        delay(400)
+        delay(400.milliseconds)
         focusRequester.requestFocus()
         keyboardController?.show()
     }
@@ -185,7 +189,7 @@ fun HabitUpsertSheetContent(
                             imeAction = ImeAction.Next,
                         ),
                     label = {
-                        if (newHabit.title.length <= 20) {
+                        if (newHabit.title.length <= TITLE_STRING_LIMIT) {
                             Text(
                                 text =
                                     stringResource(
@@ -197,7 +201,7 @@ fun HabitUpsertSheetContent(
                             Text(text = stringResource(Res.string.too_long))
                         }
                     },
-                    isError = newHabit.title.length > 20,
+                    isError = newHabit.title.length > TITLE_STRING_LIMIT,
                     modifier = Modifier.fillMaxWidth().focusRequester(focusRequester),
                 )
             }
@@ -214,7 +218,7 @@ fun HabitUpsertSheetContent(
                         ),
                     modifier = Modifier.fillMaxWidth(),
                     label = {
-                        if (newHabit.description.length <= 50) {
+                        if (newHabit.description.length <= DESCRIPTION_STRING_LIMIT) {
                             Text(
                                 text =
                                     stringResource(
@@ -226,7 +230,7 @@ fun HabitUpsertSheetContent(
                             Text(text = stringResource(Res.string.too_long))
                         }
                     },
-                    isError = newHabit.description.length > 50,
+                    isError = newHabit.description.length > DESCRIPTION_STRING_LIMIT,
                 )
             }
 
@@ -362,8 +366,8 @@ fun HabitUpsertSheetContent(
                     },
                     modifier = Modifier.padding(bottom = 32.dp).fillMaxWidth(),
                     enabled =
-                        descTextFieldState.text.length <= 50 &&
-                            titleTextFieldState.text.length <= 20 &&
+                        descTextFieldState.text.length <= DESCRIPTION_STRING_LIMIT &&
+                            titleTextFieldState.text.length <= TITLE_STRING_LIMIT &&
                             titleTextFieldState.text.isNotBlank(),
                 ) {
                     Text(
