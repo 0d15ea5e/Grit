@@ -189,7 +189,7 @@ fun HabitUpsertSheetContent(
                             imeAction = ImeAction.Next,
                         ),
                     label = {
-                        if (newHabit.title.length <= 20) {
+                        if (newHabit.title.length <= TITLE_STRING_LIMIT) {
                             Text(
                                 text =
                                     stringResource(
@@ -201,7 +201,7 @@ fun HabitUpsertSheetContent(
                             Text(text = stringResource(Res.string.too_long))
                         }
                     },
-                    isError = newHabit.title.length > 20,
+                    isError = newHabit.title.length > TITLE_STRING_LIMIT,
                     modifier = Modifier.fillMaxWidth().focusRequester(focusRequester),
                 )
             }
@@ -218,7 +218,7 @@ fun HabitUpsertSheetContent(
                         ),
                     modifier = Modifier.fillMaxWidth(),
                     label = {
-                        if (newHabit.description.length <= 50) {
+                        if (newHabit.description.length <= DESCRIPTION_STRING_LIMIT) {
                             Text(
                                 text =
                                     stringResource(
@@ -230,7 +230,7 @@ fun HabitUpsertSheetContent(
                             Text(text = stringResource(Res.string.too_long))
                         }
                     },
-                    isError = newHabit.description.length > 50,
+                    isError = newHabit.description.length > DESCRIPTION_STRING_LIMIT,
                 )
             }
 
