@@ -73,7 +73,7 @@
     <string name="foss_desc">Všetky funkcie sú dostupné. Táto verzia aplikácie nepodporuje mikro-transakcie. Ak ti táto aplikácia pridala niečo do života, Podpor ma príspevkom na</string>
     <string name="add_reminder">Pridať Pripomienku</string>
     <string name="add_reminder_desc">Dostávaj pripomienky na vybrané dni</string>
-    <string name="invalid_date_time">Vybral si čas v minulosti :')</string>
+    <string name="invalid_date_time">Vybral si čas v minulosti</string>
     <string name="reorder_tasks">Zmeniť poradie úloh</string>
     <string name="reorder_tasks_desc">Zmeniť poradie úloh, keď sú označené ako splnené</string>
     <string name="translate">Prelož</string>
