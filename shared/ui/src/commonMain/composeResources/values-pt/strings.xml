@@ -72,7 +72,7 @@
     <string name="foss_desc">Todos os recursos são desbloqueados. Esta variante da app não apoia compras na app. Se esta app adicionou valor à sua vida, apoie-me ao doar em</string>
     <string name="add_reminder">Adicionar lembrete</string>
     <string name="add_reminder_desc">Receber uma notificação de lembrete em dias selecionados</string>
-    <string name="invalid_date_time">O tempo selecionado está no passado :')</string>
+    <string name="invalid_date_time">O tempo selecionado está no passado</string>
     <string name="reorder_tasks">Reordenar tarefas</string>
     <string name="reorder_tasks_desc">Reordenar tarefas quando marcadas como concluídas</string>
     <string name="translate">Traduzir</string>
